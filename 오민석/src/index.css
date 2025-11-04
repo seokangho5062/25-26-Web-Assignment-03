@@ -1,0 +1,20 @@
+/* 🔹 index.css (전체 덮어쓰기) */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 위쪽 정렬이면 flex-start, 완전 중앙은 center */
+  background: linear-gradient(180deg, #f1f5ff 0%, #ffffff 100%);
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+}
+
+/* 기본 텍스트 색상 */
+* {
+  box-sizing: border-box;
+  color: #1e293b;
+}

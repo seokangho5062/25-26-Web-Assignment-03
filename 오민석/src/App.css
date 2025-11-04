@@ -1,0 +1,204 @@
+/* 🔹 기본 설정 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #f1f5ff 0%, #ffffff 100%);
+  font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  color: #1e293b;
+}
+
+/* 🔹 페이지 중앙 정렬 */
+.page {
+  display: grid;
+  place-items: start center;
+  min-height: 100vh;
+  padding: 60px 16px;
+}
+
+.shell {
+  background: #fff;
+  width: 100%;
+  max-width: 780px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px;
+  margin-inline: auto;
+}
+
+/* 🔹 헤더 */
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #2563eb;
+  text-align: center;
+}
+
+.header .sub {
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* 🔹 입력 폼 */
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 이름, 학번, 학과 */
+  gap: 16px 20px; /* 위아래 16px, 좌우 20px */
+  margin: 28px 0 24px;
+}
+
+/* 성별 필드는 한 줄 전체 */
+.field.gender {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+/* 라벨 */
+.label {
+  display: block;
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+/* 입력칸 */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+  outline: none;
+}
+
+/* 성별 선택창 */
+.select {
+  width: 180px;
+}
+
+/* 버튼 */
+.btn {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.btn.danger {
+  background-color: #ef4444;
+}
+
+.btn.danger:hover {
+  background-color: #dc2626;
+}
+
+/* 학생 리스트 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  background: #f1f5ff;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.1);
+}
+
+.name {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+  color: #1e293b;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* 항목 간 좌우 거리 */
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.badge {
+  display: inline-block;
+  background: #e0e7ff;
+  color: #1e40af;
+  border-radius: 10px;
+  padding: 2px 8px;
+  margin-left: 4px;
+  font-size: 12px;
+}
+
+/* 빈 리스트 */
+.empty {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+/* 반응형 (모바일) */
+@media (max-width: 640px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+  .select {
+    width: 100%;
+  }
+}
+.item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.item-main p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.item-main strong {
+  display: inline-block;
+  width: 60px; /* 라벨 길이 통일 */
+  font-weight: 600;
+  color: #1e3a8a;
+}
